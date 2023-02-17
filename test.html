@@ -1,0 +1,13 @@
+<div id="myDiv"></div>
+
+<script>
+    // Replace VIDEO_ID with the ID of the YouTube video you want to use
+    var videoId = '_w51eKfgHBs';
+
+    // Construct the URL to retrieve the thumbnail image for the video
+    var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
+
+    // Set the background image of a div element to the thumbnail image
+    var div = document.getElementById('myDiv');
+    div.style.backgroundImage = 'url(' + thumbnailUrl + ')';
+</script>
