@@ -1,13 +1,17 @@
-<div id="myDiv"></div>
+<style>
+#video-container {position: relative;height: 100vh;}
+#video-player {position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 1;}
+</style>
+
+<div id="video-container">
+  <div id="video-player"></div>
+</div>
 
 <script>
-    // Replace VIDEO_ID with the ID of the YouTube video you want to use
-    var videoId = '_w51eKfgHBs';
-
-    // Construct the URL to retrieve the thumbnail image for the video
-    var thumbnailUrl = 'https://img.youtube.com/vi/' + videoId + '/maxresdefault.jpg';
-
-    // Set the background image of a div element to the thumbnail image
-    var div = document.getElementById('myDiv');
-    div.style.backgroundImage = 'url(' + thumbnailUrl + ')';
+    var videoContainer = document.getElementById('video-player');
+    var videoIframe = document.createElement('iframe');
+    videoIframe.setAttribute('src', 'https://www.youtube.com/embed/_w51eKfgHBs?autoplay=1&loop=1&mute=1&controls=0&showinfo=0');
+    videoIframe.setAttribute('allow', 'autoplay; fullscreen');
+    videoIframe.setAttribute('frameborder', '0');
+    videoContainer.appendChild(videoIframe);
 </script>
